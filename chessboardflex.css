@@ -1,0 +1,197 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    touch-action: none;
+}
+
+.board {
+    display: flex;
+    flex-wrap: wrap;
+    width: 80vmin;
+    height: 80vmin;
+    margin: 0 auto;
+}
+
+.box {
+    width: 12.5%;
+    height: 12.5%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.white {
+    background-color: whitesmoke;
+}
+
+.black {
+    background-color: burlywood;
+}
+
+.coordinate {
+    height: auto;
+    display: flex;
+    position: absolute;
+    bottom: 2%;
+    left: 6%;
+    font-size: 12px;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.rank {
+    top: 2%;
+    right: 6%;
+    left: auto;
+}
+
+.whitetext {
+    color: burlywood;
+}
+
+.blacktext {
+    color: whitesmoke;
+}
+
+.piece {
+    width: 100%;
+    z-index: 1;
+    cursor: pointer;
+
+}
+
+.piece img {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+}
+
+
+
+@media (min-width:600px) {
+    .board {
+        width: 600px;
+        height: 600px;
+    }
+}
+
+@media (max-width:600px) {
+    .coordinate {
+        font-size: 10px;
+    }
+}
+
+@keyframes wknight1 {
+    0% {}
+
+    50% {
+        transform: translate(0%, -200%);
+    }
+
+    100% {
+        transform: translate(-100%, -200%);
+    }
+}
+
+.wknight1 img {
+    animation: wknight1 3s ease-out 0s 1 normal forwards,
+        wknight12 1s linear 18s 1 normal forwards,
+        wknight13 1s linear 21s 1 normal forwards,
+        wknight14 1s linear 22s 1 normal forwards;
+}
+
+@keyframes bpawn7 {
+    0% {}
+
+    100% {
+        transform: translatey(100%)
+    }
+}
+
+.bpawn7 img {
+    animation: bpawn7 3s ease-out 5s 1 normal forwards;
+}
+
+@keyframes wpawn7 {
+    0% {}
+
+    100% {
+        transform: translatey(-200%)
+    }
+}
+
+.wpawn7 img {
+    animation: wpawn7 3s ease-out 8s 1 normal forwards;
+}
+
+@keyframes bbishop2 {
+    0% {
+        transform: translate(0, 0)
+    }
+
+    100% {
+        transform: translate(-100%, 100%)
+    }
+}
+
+.bbishop2 img {
+    animation: bbishop2 3s ease-out 11s 1 normal forwards,
+        bbishop22 3s linear 16s 1 normal forwards;
+}
+
+@keyframes wbishop2 {
+    0% {
+        transform: translate(0, 0)
+    }
+
+    100% {
+        transform: translate(-100%, -100%)
+    }
+}
+
+.wbishop2 img {
+    animation: wbishop2 3s ease-out 14s 1 normal forwards;
+}
+
+@keyframes bbishop22 {
+    0% {
+        transform: translate(-100%, 100%)
+    }
+
+    100% {
+        transform: translate(300%, 500%)
+    }
+}
+
+@keyframes wknight12 {
+    0% {}
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes wknight13 {
+    0% {
+        transform: translatey(100%)
+    }
+
+    100% {
+        transform: translatey(100%)
+    }
+}
+
+@keyframes wknight14 {
+    0% {}
+
+    100% {
+        opacity: 100;
+    }
+}
