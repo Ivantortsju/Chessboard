@@ -8,7 +8,6 @@ body {
     align-items: center;
     justify-content: center;
     height: 100vh;
-    touch-action: none;
 }
 
 .board {
@@ -16,7 +15,7 @@ body {
     flex-wrap: wrap;
     width: 80vmin;
     height: 80vmin;
-    margin: 0 auto;
+    /* margin: 0 auto; */
 }
 
 .box {
@@ -73,21 +72,6 @@ body {
     height: auto;
 }
 
-
-
-@media (min-width:600px) {
-    .board {
-        width: 600px;
-        height: 600px;
-    }
-}
-
-@media (max-width:600px) {
-    .coordinate {
-        font-size: 10px;
-    }
-}
-
 @keyframes wknight1 {
     0% {}
 
@@ -100,7 +84,7 @@ body {
     }
 }
 
-.wknight1 img {
+#button:checked~.board .wknight1 img {
     animation: wknight1 3s ease-out 0s 1 normal forwards,
         wknight12 1s linear 18s 1 normal forwards,
         wknight13 1s linear 21s 1 normal forwards,
@@ -115,7 +99,7 @@ body {
     }
 }
 
-.bpawn7 img {
+#button:checked~.board.bpawn7 img {
     animation: bpawn7 3s ease-out 5s 1 normal forwards;
 }
 
@@ -127,7 +111,7 @@ body {
     }
 }
 
-.wpawn7 img {
+#button:checked~.board .wpawn7 img {
     animation: wpawn7 3s ease-out 8s 1 normal forwards;
 }
 
@@ -141,7 +125,7 @@ body {
     }
 }
 
-.bbishop2 img {
+#button:checked~.board.bbishop2 img {
     animation: bbishop2 3s ease-out 11s 1 normal forwards,
         bbishop22 3s linear 16s 1 normal forwards;
 }
@@ -156,7 +140,7 @@ body {
     }
 }
 
-.wbishop2 img {
+#button:checked~.board.wbishop2 img {
     animation: wbishop2 3s ease-out 14s 1 normal forwards;
 }
 
